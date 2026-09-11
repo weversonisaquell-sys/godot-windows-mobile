@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmd001"]
+
+[ext_resource type="Script" path="res://scripts/cmd_window.gd" id="1_cmd"]
+
+[node name="CMDWindow" type="Window"]
+title = "Command Prompt"
+initial_position = 1
+size = Vector2i(600, 400)
+script = ExtResource("1_cmd")

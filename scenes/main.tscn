@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw9r6kkk5qrbbq6o5xyg"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_kk4qh"]
+[ext_resource type="Script" path="res://scripts/desktop.gd" id="2_k8xq5"]
+[ext_resource type="Script" path="res://scripts/taskbar.gd" id="3_wk9j2"]
+[ext_resource type="Script" path="res://scripts/cmd_window.gd" id="4_cmd"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_kk4qh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Desktop" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -40.0
+script = ExtResource("2_k8xq5")
+
+[node name="Wallpaper" type="ColorRect" parent="CanvasLayer/Desktop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.101961, 0.101961, 0.180392, 1)
+
+[node name="DesktopIcons" type="Control" parent="CanvasLayer/Desktop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="Taskbar" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 12
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+script = ExtResource("3_wk9j2")
+
+[node name="CMDWindow" type="Window" parent="CanvasLayer"]
+title = "Command Prompt"
+initial_position = 1
+size = Vector2i(600, 400)
+script = ExtResource("4_cmd")
+hidden = true
+
+[node name="ClockWindow" type="Window" parent="CanvasLayer"]
+title = "Clock"
+initial_position = 1
+size = Vector2i(400, 500)
+hidden = true
+
+[node name="SettingsWindow" type="Window" parent="CanvasLayer"]
+title = "Settings"
+initial_position = 1
+size = Vector2i(500, 600)
+hidden = true
