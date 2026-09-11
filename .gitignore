@@ -1,0 +1,27 @@
+# Godot specific ignores
+.godot/
+export.tres
+export_presets.cfg
+.mono/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.exe
+*.zip
+*.tar.gz
+
+# User files
+*.user
+*.ini
